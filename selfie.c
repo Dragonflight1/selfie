@@ -312,6 +312,7 @@ void init_library() {
 
   SELFIE_URL = "selfie.cs.uni-salzburg.at";
 
+
   SIZEOFUINT64INBITS     = sizeof(uint64_t) * 8;
   SIZEOFUINT64STARINBITS = sizeof(uint64_t*) * 8;
 
@@ -369,6 +370,7 @@ void reset_library() {
   number_of_written_characters = 0;
 }
 
+//
 // *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~ *~*~
 // -----------------------------------------------------------------
 // ---------------------    C O M P I L E R    ---------------------
@@ -12207,7 +12209,7 @@ uint64_t selfie(uint64_t extras) {
     print_host_os();
     println();
     printf("%s: ================================================================================\n", selfie_name);
-
+     
     init_scanner();
     init_bootstrapping();
 
@@ -12326,6 +12328,7 @@ int main(int argc, char** argv) {
   init_target();
   init_kernel();
 
+  printf("%s: This is Maria Sudy's Selfie!\n", selfie_name);
   exit_code = selfie(0);
 
   return exit_selfie(exit_code, " [ ( -m | -d | -r | -y ) 0-4096 ... ]");
